@@ -7,12 +7,11 @@ phases:
 
   build:
     commands:
-      - cfn-lint bucket.yaml -gIf junit --non-zero-exit-code informational > test_result.xml
+      - cfn-lint bucket.yaml -f junit --non-zero-exit-code informational > test_result.xml
       
   # post_build:
   #   commands:
   #     - echo "Process finished"
 
 artifacts:
-  files:
-    - bucket.yaml
+  files: []
