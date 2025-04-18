@@ -7,7 +7,7 @@ phases:
 
   build:
     commands:
-      - cfn-lint bucket.yaml -gIDf junit --non-zero-exit-code informational
+      - cfn-lint bucket.yaml -gIf junit --non-zero-exit-code informational > test_result.xml
       
   # post_build:
   #   commands:
