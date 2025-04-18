@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - pip install cfn-lint
+
+  build:
+    commands:
+      - cfn-lint bucket.yaml -gIDf junit --non-zero-exit-code informational
+      
+  # post_build:
+  #   commands:
+  #     - echo "Process finished"
+
+artifacts:
+  files:
+    - bucket.yaml
